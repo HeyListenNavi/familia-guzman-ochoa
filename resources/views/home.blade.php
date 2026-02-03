@@ -141,7 +141,7 @@
             </div>
 
             <!-- Mobile Hamburger (Large Touch Target) -->
-            <button id="menu-btn" class="mobile-menu-btn touch-target p-2 text-2xl focus:outline-none md:hidden!"
+            <button id="menu-btn" class="mobile-menu-btn touch-target md:hidden! p-2 text-2xl focus:outline-none"
                 aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
             </button>
@@ -223,7 +223,7 @@
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="bg-brand-900/40 absolute inset-0 mix-blend-multiply"></div>
 
-        <div class="animate-fade-in-up relative z-10 mx-auto w-full max-w-4xl text-center">
+        <div class="pt-16 animate-fade-in-up relative z-10 mx-auto w-full max-w-4xl text-center">
             <span
                 class="bg-brand-500/90 mb-6 inline-block rounded-full border border-white/20 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-white shadow-lg backdrop-blur-sm md:text-sm">
                 JUCUM San Diego / Baja
@@ -254,8 +254,8 @@
             <div class="flex flex-col items-center gap-12 md:flex-row">
                 <div class="w-full md:w-1/2">
                     <div class="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl md:aspect-square">
-                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            alt="Familia Guzman Ochoa" class="h-full w-full object-cover">
+                        <img src="{{ asset('images/parents.jpg') }}" alt="Familia Guzman Ochoa"
+                            class="h-full w-full object-cover">
                         <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
                             <p class="text-lg font-bold text-white">Sirviendo desde 2010</p>
                         </div>
@@ -315,7 +315,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        Actualmente cursando el <strong>4to semestre de Universidad</strong>. Erick destaca por su
+                        Actualmente cursando la <strong>Universidad</strong>. Erick destaca por su
                         promedio de excelencia y participa en concursos académicos representando a su escuela.
                     </p>
                 </div>
@@ -334,7 +334,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        Cursando el <strong>4to semestre de Preparatoria</strong>. Al igual que su hermano, mantiene un
+                        Cursando la <strong>Preparatoria</strong>. Al igual que su hermano, mantiene un
                         excelente promedio y sirve activamente en la iglesia.
                     </p>
                 </div>
@@ -383,7 +383,7 @@
                 <!-- Envia -->
                 <div id="envia-detalle" class="flex flex-col items-center gap-8 md:flex-row">
                     <div class="w-full md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        <img src="{{ asset('images/envia.jpg') }}"
                             class="h-64 w-full rounded-3xl object-cover shadow-lg md:h-96">
                     </div>
                     <div class="w-full md:w-1/2">
@@ -404,7 +404,7 @@
                 <!-- Vengan y Vean -->
                 <div id="vengan-detalle" class="flex flex-col items-center gap-8 md:flex-row-reverse">
                     <div class="w-full md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1605256408284-3c6628469d65?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        <img src="{{ asset('images/vengan-y-vean.jpg') }}"
                             class="h-64 w-full rounded-3xl object-cover shadow-lg md:h-96">
                     </div>
                     <div class="w-full md:w-1/2">
@@ -594,43 +594,29 @@
         <div class="mx-auto max-w-6xl px-4">
             <div class="bg-brand-500 relative mb-16 overflow-hidden rounded-3xl p-8 text-white shadow-2xl md:p-12">
                 <div class="absolute right-0 top-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-white opacity-10"></div>
-                <div class="relative z-10 grid items-center gap-12 md:grid-cols-2">
-                    <div>
-                        <h2 class="mb-4 text-3xl font-extrabold">Contáctanos</h2>
-                        <p class="text-brand-100 mb-8">
-                            ¿Tienes preguntas o quieres apoyar? Envíanos un mensaje directo.
-                        </p>
-                        <div class="space-y-4">
-                            <a href="https://wa.me/526642685826" target="_blank"
-                                class="flex items-center gap-4 rounded-xl bg-white/20 p-4 transition hover:bg-white/30">
-                                <i class="fab fa-whatsapp text-2xl"></i>
-                                <div>
-                                    <p class="font-bold">WhatsApp Erick</p>
-                                    <p class="text-brand-100 text-xs">+52 664 268 58 26</p>
-                                </div>
-                            </a>
-                            <a href="mailto:erick.guzman@ywamsdb.org"
-                                class="flex items-center gap-4 rounded-xl bg-white/20 p-4 transition hover:bg-white/30">
-                                <i class="fas fa-envelope text-2xl"></i>
-                                <div>
-                                    <p class="font-bold">Email</p>
-                                    <p class="text-brand-100 text-xs">erick.guzman@ywamsdb.org</p>
-                                </div>
-                            </a>
-                        </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <h2 class="mb-4 text-3xl font-extrabold">Contáctanos</h2>
+                    <p class="text-brand-100 mb-8 max-w-2xl">
+                        ¿Tienes preguntas o quieres apoyar? Envíanos un mensaje directo.
+                    </p>
+                    <div class="flex w-full flex-col justify-center gap-4 md:w-auto md:flex-row">
+                        <a href="https://wa.me/526642685826" target="_blank"
+                            class="flex min-w-[240px] items-center justify-center gap-4 rounded-xl bg-white/20 p-4 text-left transition hover:bg-white/30 md:justify-start">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <div>
+                                <p class="font-bold">WhatsApp Erick</p>
+                                <p class="text-brand-100 text-xs">+52 664 268 58 26</p>
+                            </div>
+                        </a>
+                        <a href="mailto:erick.guzman@ywamsdb.org"
+                            class="flex min-w-[240px] items-center justify-center gap-4 rounded-xl bg-white/20 p-4 text-left transition hover:bg-white/30 md:justify-start">
+                            <i class="fas fa-envelope text-2xl"></i>
+                            <div>
+                                <p class="font-bold">Email</p>
+                                <p class="text-brand-100 text-xs">erick.guzman@ywamsdb.org</p>
+                            </div>
+                        </a>
                     </div>
-                    <form class="rounded-2xl bg-white p-6 text-gray-800 shadow-lg"
-                        onsubmit="event.preventDefault(); alert('Mensaje enviado');">
-                        <h3 class="mb-4 text-lg font-bold">Envíanos un mensaje</h3>
-                        <input type="text" placeholder="Tu Nombre"
-                            class="focus:border-brand-500 mb-3 w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:outline-none">
-                        <input type="email" placeholder="Tu Email"
-                            class="focus:border-brand-500 mb-3 w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:outline-none">
-                        <textarea placeholder="Mensaje"
-                            class="focus:border-brand-500 mb-4 h-24 w-full rounded-lg border border-gray-200 bg-gray-50 p-3 focus:outline-none"></textarea>
-                        <button
-                            class="bg-dark-900 w-full rounded-lg py-3 font-bold text-white transition hover:bg-black">Enviar</button>
-                    </form>
                 </div>
             </div>
 
